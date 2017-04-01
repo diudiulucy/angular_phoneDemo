@@ -4,11 +4,11 @@
             <!--Sidebar content-->
 
             <p>
-                Search: <input ng-model="query">
+                Search: <input ng-model="$ctrl.query">
             </p>
             <p>
                 Sort by:
-                <select ng-model = "orderProp">
+                <select ng-model = "$ctrl.orderProp">
                     <option value="name">Alphabetical</option>
                     <option value="age">Newest</option>
                 </select>
@@ -20,9 +20,9 @@
             <!--Body content-->
 
             <ul class="phones">
-                <li ng-repeat="phone in phones | filter:query|orderBy:orderProp" class="thumbnail">
-                    <a href="#phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
-                    <a href="#phones/{{phone.id}}">{{phone.name}}</a>
+                <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query|orderBy:$ctrl.orderProp" class="thumbnail phone-listing">
+                    <a href="#!phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+                    <a href="#!phones/{{phone.id}}">{{phone.name}}</a>
                     <p>{{phone.snippet}}</p>
                 </li>
             </ul>
