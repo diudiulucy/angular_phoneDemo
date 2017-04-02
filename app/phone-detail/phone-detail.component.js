@@ -5,7 +5,7 @@ angular.
 module('phoneDetail').
 component('phoneDetail',{
     templateUrl: 'phone-detail/phone-detail.template.html',
-    controller: ['$routeParams','Phone',function ($routeParams,Phone) {
+    controller: ['$routeParams','Phone',function PhoneDetailController($routeParams,Phone) {
         // $http.get('phones/'+$routeParams.phoneId +'.json').success(function (data) {
         //     $scope.phone = data;
         //     $scope.mainImageUrl = data.images[0];

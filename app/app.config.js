@@ -12,7 +12,5 @@ config(['$locationProvider','$routeProvider',
         when('/phones/:phoneId',{
            template:'<phone-detail></phone-detail>'
         }).
-        otherwise({
-            redirectTo: '/phones'
-        });
+        otherwise('/phones');
     }]);
